@@ -64,6 +64,7 @@ class AdminLoginController extends Controller
     }
     public function logout(){
         Auth::guard('admin')->logout();
+
         return  redirect()->route('admin_login');
     }
 
@@ -73,6 +74,6 @@ class AdminLoginController extends Controller
             return redirect()->route('admin_login');
         }
 
-        return  view('admin.reset_password');
+        return view('admin.reset_password');
     }
 }
