@@ -64,7 +64,7 @@ class AdminLoginController extends Controller
     }
     public function logout(){
         Auth::guard('admin')->logout();
-        return redirect()->route('admin_login');
+        return  redirect()->route('admin_login');
     }
 
     public function reset_password($token,$email){
@@ -73,6 +73,6 @@ class AdminLoginController extends Controller
             return redirect()->route('admin_login');
         }
 
-        return view('admin.reset_password');
+        return  view('admin.reset_password');
     }
 }
